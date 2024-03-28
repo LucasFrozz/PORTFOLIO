@@ -1,0 +1,225 @@
+@charset "utf-8";
+
+@keyframes rotateCursor {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #4b0082, #d52867);
+  background: -webkit-linear-gradient(135deg, #4b0082, #6b0128);
+  background: -moz-linear-gradient(135deg, #4b0082, #d52867);
+  background: -o-linear-gradient(135deg, #4b0082, #d52867);
+  background: -ms-linear-gradient(135deg, #4b0082, #d52867);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-y: hidden;
+  cursor: url("cursor.png");
+}
+
+@keyframes moveImage {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+img {
+  width: 600px;
+  height: 600px;
+  margin-bottom: 100px;
+  margin-left: -60px;
+  transition: transform 0.3s ease;
+}
+
+.logo img {
+  width: 200px;
+  margin-left: 65px;
+}
+
+footer {
+  margin-bottom: 5%;
+  font-size: 20px;
+  text-shadow: white 1px 1px 1px;
+  font-family: "Sedgwick Ave Display", cursive;
+  font-size: 25px;
+  animation: moveFooterElements 2.5s ease infinite;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  border-image: fill 0 linear-gradient(#0000, #000);
+}
+
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.texto {
+  margin-left: 100px;
+  margin-bottom: 150px;
+  font-size: 25px;
+  animation: heartbeat 1s ease-out infinite alternate;
+}
+
+.texto h1 {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 0px rgb(255, 255, 255);
+  font-family: "Sedgwick Ave Display", cursive;
+  word-spacing: 10px;
+  letter-spacing: 3px;
+  margin-top: 30px;
+  font-family: "Protest Riot", sans-serif;
+  font-size: 40px;
+}
+
+h2 {
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 2px 0px rgb(255, 255, 255);
+  font-family: "Sedgwick Ave Display", cursive;
+  word-spacing: 10px;
+  letter-spacing: 3px;
+  margin-top: 30px;
+  font-family: "Protest Riot", sans-serif;
+}
+
+span {
+  background: linear-gradient(70deg, #00ccff, #d400ff, #00f7ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+}
+
+header {
+  color: #fff;
+  padding: 20px;
+  border-radius: 50px;
+  font-family: "Sedgwick Ave Display", cursive;
+  text-shadow: 2px 1px 0px rgb(0, 0, 0);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav img {
+  margin-right: 250px;
+
+}
+
+nav a {
+  color: white;
+  font-size: 35px;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 10px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+  box-shadow: 3px 3px 3px 3px black;
+}
+
+nav a:hover {
+  background-color: #ffffff;
+}
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-top: 15px;
+  width: 250px;
+  height: 120px;
+  margin-left: 25%;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.card1 {
+  width: 60px;
+  height: 60px;
+  outline: none;
+  border: none;
+  background: rgb(0, 0, 0);
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.instagram {
+  margin-top: -.6em;
+
+  fill: #cc39a4;
+}
+
+.card3 {
+  width: 60px;
+  height: 60px;
+  outline: none;
+  border: none;
+  background: rgb(255, 255, 255);
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.github {
+  margin-top: -.6em;
+
+}
+
+.card1:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #cc39a4;
+}
+
+.card1:hover .instagram {
+  fill: white;
+}
+
+
+.card3:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: black;
+}
+
+.card3:hover .github {
+  fill: white;
+}
